@@ -1,0 +1,189 @@
+export type Project = {
+  slug: string;
+  name: string;
+  year: string;
+  role: string;
+  tagline: string;
+  summary: string;
+  features: string[];
+  tech: string[];
+  architecture?: { label: string; items: string[] }[];
+  links: { live?: string; github?: string };
+  image:string;
+  frame1:string,
+  frame2:string,
+  frame3:string,
+  // logo:string,
+};
+
+export const projects: Project[] = [
+  {
+    slug: "agent-atlas",
+    name: "Agent Atlas",
+    year: "June 2026",
+    image:"/agent-atlas/agent-atlas.png",
+    frame1:"/agent-atlas/research.png",
+    frame2:"/agent-atlas/graph.png",
+    frame3:"/agent-atlas/rag.png",
+    // // logo:"/agent-atlas/logo.png",
+    role: "Research assistant · multi-agent",
+    tagline: "Multi-agent research with citations, diagrams, and RAG chat.",
+    summary:
+      "Agent Atlas uses a LangGraph workflow to decompose a topic, run multi-stage research through specialized agents, and generate a structured report with citations, embedded images, and mermaid diagrams. Users can then chat with the report through a streaming RAG pipeline.",
+    features: [
+      "Multi-agent research workflow",
+      "Parallel researcher execution",
+      "RAG-powered chat over generated reports",
+      "Research memory & persistence",
+      "Thread-based conversations",
+      "Source citations",
+      "Streaming responses",
+    ],
+    tech: [
+      "Next.js",
+      "LangGraph",
+      "FastAPI",
+      "Pinecone",
+      "PostgreSQL",
+      "shadcn/ui",
+      "Zustand", 
+    ],
+    architecture: [
+      { label: "Frontend", items: ["Next.js", "shadcn/ui"] },
+      { label: "Backend", items: ["FastAPI", "PostgreSQL"] },
+      { label: "Orchestration", items: ["LangChain", "LangGraph", "Pinecone"] },
+      {
+        label: "Models",
+        items: [
+          "Llama 3.1 8B — prompt enhancement",
+          "Llama 3.3 70B Versatile — planning",
+          "Llama 4 Scout 17B — research agents",
+          "DeepSeek V4 Flash — workers",
+          "GPT-OSS 120B — summarization & reasoning",
+          "NVIDIA NV-Embed-v1 — embeddings",
+        ],
+      },
+    ],
+    links: {
+      live: "https://agent-atlas-one.vercel.app",
+      github: "https://github.com/bhumitsingh856-cyber/Agent-Atlas",
+    },
+  },
+  {
+    slug: "orion-studio-ai",
+    name: "Orion Studio AI",
+    year: "Feb 2026",
+    image:"/orion-ai/orion-ai.png",
+    frame1:"/orion-ai/chat.png",
+    frame2:"/orion-ai/img.png",
+    frame3:"/orion-ai/gen.png",
+    // // logo:"/orion-ai/logo.png",
+    role: "Multimodal AI chat platform",
+    tagline: "Enterprise-grade multimodal AI workspace.",
+    summary:
+      "An intelligent agent system for autonomous decision-making and tool routing, with a production RAG pipeline, multi-modal tools (web search, image generation, vision, code, documents), and a fast, responsive UI.",
+    features: [
+      "Autonomous agent with tool routing",
+      "RAG pipeline over user documents",
+      "Web search via Tavily",
+      "Image generation & vision analysis",
+      "Code generation",
+      "PDF / DOCX intelligence",
+    ],
+    tech: [
+      "Next.js",
+      "LangChain JS",
+      "Pinecone",
+      "MongoDB",
+      "Clerk",
+      "Cloudinary",
+      "Zustand",
+      "Tailwind",
+      "Framer Motion",
+      "Groq · gpt-oss-120b",
+      "FLUX.1-schnell",
+      "Qwen2.5-VL-72B",
+    ],
+    links: {
+      live: "https://orion-studio-sigma.vercel.app",
+      github: "https://github.com/bhumitsingh856-cyber/ORION-AI",
+    },
+  },
+  {
+    slug: "gen-ui",
+    name: "Gen UI",
+    year: "April 2026",
+    image:" /gen-ui/gen-ui.png",
+    frame1:"/gen-ui/ui.png",
+    frame2:"/gen-ui/f2.png",
+    frame3:"/gen-ui/dash.png",
+    // // logo:"/gen-ui/logo.png",
+    role: "AI frontend generator",
+    tagline: "A prompt becomes a complete React application.",
+    summary:
+      "Gen UI generates multi-file frontend projects from a single prompt — with a structured file tree, integrated editor, live preview, AI error correction, and downloadable, shareable output.",
+    features: [
+      "Full multi-file project generation",
+      "Clean component structure",
+      "Integrated editor with live preview",
+      "AI-based error correction",
+      "Downloadable code",
+      "Shareable live link",
+    ],
+    tech: [
+      "Next.js",
+      "LangChain",
+      "Fireworks AI · Deepseek-v4-flash",
+      "Groq · Kimi 2 Instruct",
+      "CodeSandbox",
+      "Motion",
+      "Zustand",
+    ],
+    links: {
+      live: "https://gen-ui-seven-black.vercel.app",
+      github: "https://github.com/bhumitsingh856-cyber/GEN-UI",
+    },
+  },
+  {
+    slug: "orbit",
+    name: "Orbit",
+    year: "Jan 2026",
+    image:"/orbit/orbit.png",
+    frame1:"/orbit/profile.png",
+    frame2:"/orbit/home.png",
+    frame3:"/orbit/ai.png",
+    // // logo:"/orbit/logo.png",
+    role: "Full-stack social platform",
+    tagline: "A social platform with realtime chat and AI inside.",
+    summary:
+      "End-to-end social product: auth, profiles, posts, stories, likes, comments, follows, realtime chat, and AI for text and image generation. Tuned for performance with lazy loading, code splitting, and skeleton loaders.",
+    features: [
+      "JWT auth with role-protected routes",
+      "Posts, stories, likes, comments, follows",
+      "Realtime chat via Socket.io",
+      "AI text generation (Gemini 2.5 Flash)",
+      "AI image generation (Stable Diffusion XL)",
+      "Optimized media via Cloudinary",
+    ],
+    tech: [
+      "MongoDB",
+      "Express",
+      "React",
+      "Node.js",
+      "Socket.io",
+      "Cloudinary",
+      "Tailwind",
+      "JWT",
+      "Framer Motion",
+      "Gemini 2.5 Flash",
+      "Stable Diffusion XL",
+    ],
+    links: {
+      live: "https://orbit-seven-pink.vercel.app",
+      github: "https://github.com/bhumitsingh856-cyber/ORBIT",
+    },
+  },
+];
+
+export const getProject = (slug: string) =>
+  projects.find((p) => p.slug === slug);
