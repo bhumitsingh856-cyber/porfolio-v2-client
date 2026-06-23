@@ -17,9 +17,10 @@ export const profile = {
     "Building",
     "Improving",
     "Process",
-    "Curious"
+    "Curious",
   ],
-  about: "Full-Stack AI Engineer specializing in building LLM applications and Agentic Systems , I design and develop end-to-end AI products accress the full stack - AI Orchestration , frontend and backend",
+  about:
+    "Full-Stack AI Engineer specializing in building LLM applications and Agentic Systems , I design and develop end-to-end AI products accress the full stack - AI Orchestration , frontend and backend",
   bio: [
     "I build software at the intersection of full-stack engineering and applied AI — multi-agent systems, retrieval pipelines, and the interfaces that make them feel inevitable.",
     "Currently a B.Tech CSE (AI & ML) undergrad at IPS Academy, Indore. I ship projects end-to-end, from data layer to interaction design.",
@@ -46,9 +47,44 @@ export const profile = {
   ],
   skills: {
     Languages: ["Python", "TypeScript", "Java"],
-    Frontend: ["React", "Next.js","Tailwind CSS"],
-    Backend: ["Express", "FastAPI", "MongoDB", "PostgreSQL","SQL"],
-    "AI / ML": ["LangChain", "LangGraph", "RAG","LLMs"],
-    Tools:["Clerk","Cloudinary","LangSmith"]
+    Frontend: ["React", "Next.js", "Tailwind CSS"],
+    Backend: ["Express", "FastAPI", "MongoDB", "PostgreSQL", "SQL"],
+    "AI / ML": ["LangChain", "LangGraph", "RAG", "LLMs"],
+    Tools: ["Clerk", "Cloudinary", "LangSmith"],
   },
+
+  certificates: [
+    {
+      name: "React(Basic)",
+      issuer: "HackerRank",
+      year: "2026",
+      credentialId: "ccc1bc8c33d4",
+      url: "https://www.hackerrank.com/certificates/ccc1bc8c33d4",
+      image: "/certificates/hr-react.png",
+    },
+    {
+      name: "AI Foundations",
+      issuer: "OpenAI",
+      year: "2026",
+      credentialId: "rwdrja6vb6",
+      url: "https://academy.openai.com/home/certificate/rwdrja6vb6",
+      image: "/certificates/oai-ai.png",
+    },
+    {
+      name: "Introduction to Generative AI",
+      issuer: "Simplilearn",
+      year: "2026",
+      credentialId: "10381036",
+      url: "https://simpli-web.app.link/e/yGwuCLhAb4b",
+      image: "/certificates/sl-genai.png",
+    },
+    {
+      name: "Google skills Badges",
+      issuer: "Google Cloud",
+      year: "2026",
+      credentialId: "null",
+      url: "https://www.skills.google/public_profiles/0285c729-e995-4470-b498-294ab8f238b0",
+      image: "/certificates/gc-badges.png",
+    }, 
+  ],
 };

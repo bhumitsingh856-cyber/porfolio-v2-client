@@ -18,7 +18,7 @@ export function ImagePlaceholder({
     >
       {image && (
         <img
-          className="group-hover:scale-95 scale-105 duration-500"
+          className="group-hover:scale-105 duration-500"
           src={image}
           alt=""
         />

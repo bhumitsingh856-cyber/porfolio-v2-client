@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
-import { X, Send  } from "lucide-react";
+import { X, Send } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { PixelBot } from "../home/Logo";
 import EnhancedMarkdown from "../primitives/Markdown";
@@ -18,10 +18,13 @@ type ChatState = "idle" | "loading" | "error";
 // ─── Component ─────────────────────────────────────────────────────
 
 const SUGGESTIONS = [
+  "Introduce Bhumit.",
   "What is Bhumit's tech stack?",
   "Tell me about his AI projects.",
   "Where is he studying?",
-  "How can I contact Bhumit?",
+  "How can I contact?",
+  "What's his github, linkedin profile?",
+  "What are his certifications?"
 ];
 
 export function AboutChatbot() {
@@ -35,19 +38,18 @@ export function AboutChatbot() {
   const inputRef = useRef<HTMLInputElement>(null);
 
   // Auto-scroll to bottom
-  
+
   const generateId = () =>
     `${Date.now()}-${Math.random().toString(36).slice(2, 9)}`;
 
-  const handleSend = async () => {
+  const handleSend = async (s: string = input) => {
     setChatState("loading");
-    setInput("");
-    setMessages((prev) => [...prev, { role: "user", content: input }]);
+    setMessages((prev) => [...prev, { role: "user", content: s }]);
     try {
       const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ thread: generateId(), query: input }),
+        body: JSON.stringify({ thread: generateId(), query: s }),
       });
       let ac: string = "";
       if (!res.body) return;
@@ -73,6 +75,7 @@ export function AboutChatbot() {
     } finally {
       setChatState("idle");
       setStream("");
+      setInput("");
     }
   };
 
@@ -82,7 +85,7 @@ export function AboutChatbot() {
   };
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
-  }, [messages , stream]);
+  }, [messages, stream]);
 
   // Focus input when opened
   useEffect(() => {
@@ -90,6 +93,7 @@ export function AboutChatbot() {
       setTimeout(() => inputRef.current?.focus(), 300);
     }
   }, [isOpen]);
+ 
   return (
     <>
       {/* ─── Floating Toggle Button ─────────────────────────────── */}
@@ -165,16 +169,35 @@ export function AboutChatbot() {
                   </div>
                 </div>
                 <div className="flex items-center gap-2">
-                  <button onClick={() => setMessages([])}>Clear</button>
+                  <button
+                    className="rounded-full p-2 text-muted-foreground transition-colors hover:bg-muted hover:text-foreground cursor-pointer"
+                    onClick={() => setMessages([])}
+                  >
+                    Clear
+                  </button>
                   <button
                     onClick={() => setIsOpen(false)}
-                    className="rounded-full p-2 text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
+                    className="rounded-full p-2 text-muted-foreground transition-colors hover:bg-muted hover:text-foreground cursor-pointer"
                     aria-label="Close chat"
                   >
                     <X size={18} />
                   </button>
                 </div>
               </div>
+
+              {messages.length === 0 &&
+                SUGGESTIONS.map((s, i) => (
+                  <div key={i} className="flex flex-col mt-2 gap-2">
+                    <button
+                      onClick={() => {
+                        handleSend(s);
+                      }}
+                      className="rounded-full border hairline bg-muted/30 w-fit mx-auto px-4 py-3 cursor-pointer"
+                    >
+                      {s}
+                    </button>
+                  </div>
+                ))}
 
               {/* Messages */}
               <div className="flex-1 overflow-y-auto px-5 py-4 space-y-4">
@@ -193,17 +216,19 @@ export function AboutChatbot() {
                           : "max-w-[100%] rounded-2xl px-4 py-3 text-sm leading-relaxed "
                       }`}
                     >
-                      {
-                        m.role === "ai" ? <EnhancedMarkdown content={m.content} /> : m.content
-                      }
+                      {m.role === "ai" ? (
+                        <EnhancedMarkdown content={m.content} />
+                      ) : (
+                        m.content
+                      )}
                     </div>
                   </motion.div>
                 ))}
-                {stream && 
-                    <div className="max-w-[100%] rounded-2xl px-4 py-3 text-sm leading-relaxed ">
-                      <EnhancedMarkdown content={stream} /> 
+                {stream && (
+                  <div className="max-w-[100%] rounded-2xl px-4 py-3 text-sm leading-relaxed ">
+                    <EnhancedMarkdown content={stream} />
                   </div>
-                }
+                )}
                 {/* Typing indicator */}
                 {chatState === "loading" && (
                   <motion.div
@@ -260,34 +285,4 @@ export function AboutChatbot() {
       </AnimatePresence>
     </>
   );
-}
-
-// ─── Text Formatter ────────────────────────────────────────────────
-
-function formatText(text: string) {
-  const parts = text.split(/(\*\*.*?\*\*|\[.*?\]\(.*?\))/g);
-  return parts.map((part, i) => {
-    if (part.startsWith("**") && part.endsWith("**")) {
-      return (
-        <strong key={i} className="font-semibold">
-          {part.slice(2, -2)}
-        </strong>
-      );
-    }
-    const linkMatch = part.match(/\[(.*?)\]\((.*?)\)/);
-    if (linkMatch) {
-      return (
-        <a
-          key={i}
-          href={linkMatch[2]}
-          target="_blank"
-          rel="noreferrer"
-          className="underline decoration-foreground/30 underline-offset-2 transition-colors hover:text-foreground hover:decoration-foreground"
-        >
-          {linkMatch[1]}
-        </a>
-      );
-    }
-    return <span key={i}>{part}</span>;
-  });
 }
