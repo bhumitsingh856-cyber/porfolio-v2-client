@@ -33,7 +33,7 @@ export function AboutChatbot() {
   const [input, setInput] = useState<string>("");
   const [chatState, setChatState] = useState<ChatState>("idle");
   const [stream, setStream] = useState<string>("");
-
+  const [threadId, setThreadId] = useState<string | null>(null);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
@@ -46,10 +46,10 @@ export function AboutChatbot() {
     setChatState("loading");
     setMessages((prev) => [...prev, { role: "user", content: s }]);
     try {
-      const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}`, {
+      const res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/ask`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ thread: generateId(), query: s }),
+        body: JSON.stringify({ thread: threadId , query: s }),
       });
       let ac: string = "";
       if (!res.body) return;
@@ -87,6 +87,16 @@ export function AboutChatbot() {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages, stream]);
 
+  useEffect(()=>{
+    const id=localStorage.getItem("portfolio_threadId");
+    if(id){
+      setThreadId(id);
+    }else{
+      const newId=generateId();
+      localStorage.setItem("portfolio_threadId",newId);
+      setThreadId(newId);
+    }
+  },[])
   // Focus input when opened
   useEffect(() => {
     if (isOpen) {

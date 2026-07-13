@@ -1,7 +1,17 @@
 "use client"
 import { useEffect } from "react";
-
+import axios from 'axios'
 export function SmoothScroll() {
+  const coldStart = async () => {
+    try {
+      await axios.get(`${process.env.NEXT_PUBLIC_BACKEND_URL}/ping`);
+    } catch (err) {
+      null
+    }
+  }
+  useEffect(() => {
+    coldStart()
+  }, [])
   useEffect(() => {
     if (typeof window === "undefined") return;
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
