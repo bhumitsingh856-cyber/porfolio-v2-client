@@ -70,6 +70,66 @@ export const projects: Project[] = [
     },
   },
   {
+    "slug": "campus-assistant",
+    "name": "Campus Assistant",
+    "year": "July 2026",
+    "image": "/campus-bot/hero.png",
+    "frame1": "/campus-bot/screen1.png",
+    "frame2": "/campus-bot/screen2.jpeg",
+    "frame3": "/campus-bot/screen3.png",
+    "role": "AI Campus Assistant",
+    "tagline": "Multi-channel conversational AI for campus student services with LangGraph orchestration.",
+    "summary": "Campus Assistant is an intelligent conversational AI agent that provides students with instant access to academic information, attendance records, syllabus, placements, and campus resources. Powered by LangGraph for agentic workflow orchestration, the system features tool-calling capabilities, PostgreSQL-backed session persistence, and Pinecone vector-based retrieval. Deployed across Telegram, WhatsApp, and Web, it consolidates campus services into a unified chat interface.",
+    "features": [
+      "Real-time attendance retrieval via portal integration",
+      "Syllabus access for engineering branches (CSE, CSE-AIML, CSE-DS, CS-IT)",
+      "Student profile management (register/unregister)",
+      "Web search & scraping with Tavily Search and Firecrawl",
+      "Vector-based semantic search over institutional documents",
+      "Multi-channel deployment (Telegram, WhatsApp, Web)",
+      "Persistent conversation history with PostgreSQL checkpointing",
+      "Agentic AI workflows with tool-calling capabilities",
+      "Context-aware conversations with message trimming"
+    ],
+    "tech": [
+      "Next.js",
+      "LangGraph",
+      "FastAPI",
+      "Pinecone",
+      "PostgreSQL",
+      "Telegram Bot API",
+      "Twilio",
+      "shadcn/ui"
+    ],
+    "architecture": [
+      { "label": "Frontend", "items": ["Next.js", "shadcn/ui", "Tailwind CSS"] },
+      { "label": "Backend", "items": ["FastAPI", "PostgreSQL", "psycopg async pool"] },
+      { "label": "Orchestration", "items": ["LangGraph", "LangChain", "Pinecone Vector Store"] },
+      { 
+        "label": "LLM & Tools", 
+        "items": [
+          "Cerebras GLM-4.7 — primary LLM",
+          "LangChain-Groq — optional provider",
+          "TavilySearch — web search",
+          "Firecrawl — web scraping & page interaction",
+          "Custom tools — attendance & syllabus retrieval"
+        ]
+      },
+      { 
+        "label": "Channels", 
+        "items": [
+          "Telegram Bot API",
+          "Twilio WhatsApp",
+          "REST API"
+        ]
+      }
+    ],
+    "links": {
+      "live": "https://campus-client-1bmw.vercel.app/",
+      "github": "https://github.com/bhumitsingh856-cyber/campus-agent"
+    }
+  },
+  {
     slug: "orion-studio-ai",
     name: "Orion Studio AI",
     year: "Feb 2026",
