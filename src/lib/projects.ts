@@ -194,7 +194,7 @@ export const projects: Project[] = [
       "Next.js",
       "LangChain",
       "Fireworks AI · Deepseek-v4-flash",
-      "Groq · Kimi 2 Instruct",
+      "Groq · llama-3.3-70b-versatile",
       "CodeSandbox",
       "Motion",
       "Zustand",
