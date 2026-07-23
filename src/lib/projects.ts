@@ -130,6 +130,42 @@ export const projects: Project[] = [
     }
   },
   {
+    slug: "gen-ui",
+    name: "Gen UI",
+    year: "April 2026",
+    image:" /gen-ui/gen-ui.png",
+    frame1:"/gen-ui/ui.png",
+    frame2:"/gen-ui/f2.png",
+    frame3:"/gen-ui/dash.png",
+    // // logo:"/gen-ui/logo.png",
+    role: "AI frontend generator",
+    tagline: "A prompt becomes a complete React application.",
+    summary:
+      "Gen UI generates multi-file frontend projects from a single prompt — with a structured file tree, integrated editor, live preview, AI error correction, AI Assistant for file updation and downloadable, shareable output.",
+    features: [
+      "Full multi-file project generation",
+      "Clean component structure",
+      "Integrated editor with live preview",
+      "AI-based error correction",
+      "Downloadable code",
+      "Shareable live link",
+      "UI Assistant for file updation",
+    ],
+    tech: [
+      "Next.js",
+      "LangChain",
+      "Fireworks AI · Deepseek-v4-flash",
+      "Groq",
+      "CodeSandbox",
+      "Motion",
+      "Zustand",
+    ],
+    links: {
+      live: "https://gen-ui-seven-black.vercel.app",
+      github: "https://github.com/bhumitsingh856-cyber/GEN-UI",
+    },
+  },
+  {
     slug: "orion-studio-ai",
     name: "Orion Studio AI",
     year: "Feb 2026",
@@ -141,7 +177,7 @@ export const projects: Project[] = [
     role: "Multimodal AI chat platform",
     tagline: "Enterprise-grade multimodal AI workspace.",
     summary:
-      "An intelligent agent system for autonomous decision-making and tool routing, with a production RAG pipeline, multi-modal tools (web search, image generation, vision, code, documents), and a fast, responsive UI.",
+    "An intelligent agent system for autonomous decision-making and tool routing, with a production RAG pipeline, multi-modal tools (web search, image generation, vision, code, documents), and a fast, responsive UI.",
     features: [
       "Autonomous agent with tool routing",
       "RAG pipeline over user documents",
@@ -167,41 +203,6 @@ export const projects: Project[] = [
     links: {
       live: "https://orion-studio-sigma.vercel.app",
       github: "https://github.com/bhumitsingh856-cyber/ORION-AI",
-    },
-  },
-  {
-    slug: "gen-ui",
-    name: "Gen UI",
-    year: "April 2026",
-    image:" /gen-ui/gen-ui.png",
-    frame1:"/gen-ui/ui.png",
-    frame2:"/gen-ui/f2.png",
-    frame3:"/gen-ui/dash.png",
-    // // logo:"/gen-ui/logo.png",
-    role: "AI frontend generator",
-    tagline: "A prompt becomes a complete React application.",
-    summary:
-      "Gen UI generates multi-file frontend projects from a single prompt — with a structured file tree, integrated editor, live preview, AI error correction, and downloadable, shareable output.",
-    features: [
-      "Full multi-file project generation",
-      "Clean component structure",
-      "Integrated editor with live preview",
-      "AI-based error correction",
-      "Downloadable code",
-      "Shareable live link",
-    ],
-    tech: [
-      "Next.js",
-      "LangChain",
-      "Fireworks AI · Deepseek-v4-flash",
-      "Groq · llama-3.3-70b-versatile",
-      "CodeSandbox",
-      "Motion",
-      "Zustand",
-    ],
-    links: {
-      live: "https://gen-ui-seven-black.vercel.app",
-      github: "https://github.com/bhumitsingh856-cyber/GEN-UI",
     },
   },
   {
