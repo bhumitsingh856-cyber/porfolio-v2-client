@@ -141,7 +141,7 @@ export const projects: Project[] = [
     role: "AI frontend generator",
     tagline: "A prompt becomes a complete React application.",
     summary:
-      "Gen UI generates multi-file frontend projects from a single prompt — with a structured file tree, integrated editor, live preview, AI error correction, AI Assistant for file updation and downloadable, shareable output.",
+      "Gen UI generates multi-file frontend projects from a single prompt — with a structured file tree, integrated editor, live preview, AI error correction, AI Assistant for file updation and downloadable, shareable output , persist generations in database.",
     features: [
       "Full multi-file project generation",
       "Clean component structure",
@@ -150,12 +150,14 @@ export const projects: Project[] = [
       "Downloadable code",
       "Shareable live link",
       "UI Assistant for file updation",
+      "Clerk Authentication"
     ],
     tech: [
       "Next.js",
       "LangChain",
       "Fireworks AI · Deepseek-v4-flash",
       "Groq",
+      "MongoDB",
       "CodeSandbox",
       "Motion",
       "Zustand",
