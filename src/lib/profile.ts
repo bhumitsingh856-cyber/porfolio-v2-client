@@ -50,8 +50,8 @@ export const profile = {
     Frontend: ["React", "Next.js", "Tailwind CSS","Shadcn UI"],
     Backend: ["Node.js","Express", "FastAPI", "MongoDB", "PostgreSQL", "SQL"],
     AI : ["LangChain", "LangGraph", "RAG", "LLMs"],
-    ML : ["Numpy", "Pandas", "Matplotlib", "Seaborn"],
-    Tools: ["Clerk", "Cloudinary", "LangSmith"],
+    ML : ["Numpy", "Pandas", "Matplotlib", "Seaborn" , "Scikit-Learn"],
+    Tools: ["Clerk", "Cloudinary", "LangSmith", "Git"],
   },
 
   certificates: [
