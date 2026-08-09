@@ -28,7 +28,7 @@ export function Certificates() {
 
         <ul className="grid gap-px overflow-hidden border hairline md:grid-cols-2 lg:grid-cols-3">
           {profile.certificates.map((c, i) => (   
-            <Reveal key={c.credentialId} delay={i * 0.04}>
+            <Reveal key={i} delay={i * 0.04}>
               <li className="group relative h-full bg-background">
                   <img src={c.image} className="absolute opacity-100 w-40 " alt="" />
                 <a

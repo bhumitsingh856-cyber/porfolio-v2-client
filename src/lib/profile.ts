@@ -16,7 +16,6 @@ export const profile = {
     "Learning",
     "Building",
     "Improving",
-    "Process",
     "Curious",
   ],
   about:
@@ -55,6 +54,14 @@ export const profile = {
   },
 
   certificates: [
+    {
+      name: "Agentic AI Certified Foundations Associate",
+      issuer: "Oracle",
+      year: "2026",
+      credentialId: "",
+      url: "https://catalog-education.oracle.com/ords/certview/sharebadge?id=BB8666B5B3FB668C9EFE4EB9DBC8FF531D4408A43015C0D88C404180186E4E8F",
+      image: "/certificates/oracle.png",
+    },
     {
       name: "Introduction To Langgraph",
       issuer: "Langchain Academy",
@@ -99,7 +106,7 @@ export const profile = {
       name: "Google skills Badges",
       issuer: "Google Cloud",
       year: "2026",
-      credentialId: "null",
+      credentialId: "",
       url: "https://www.skills.google/public_profiles/0285c729-e995-4470-b498-294ab8f238b0",
       image: "/certificates/gc-badges.png",
     }, 

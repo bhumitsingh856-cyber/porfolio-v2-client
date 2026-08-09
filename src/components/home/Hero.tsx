@@ -40,7 +40,7 @@ export function Hero() {
       <div className="mx-auto flex min-h-[100svh] max-w-[1600px] flex-col justify-between px-6 pt-32 pb-10 md:px-10 md:pt-40">
         <div className="grid gap-6 md:grid-cols-12">
           <p className="font-mono text-[11px] uppercase tracking-[0.28em] text-paper/60 md:col-span-3">
-            <span className="text-paper/40">(01)</span> — Portfolio · ’26
+            <span className="text-paper/40">(01)</span> — Portfolio · 
           </p>
           <p className="text-balance text-sm leading-relaxed text-paper/70 md:col-span-5 md:col-start-8">
             {profile.about}
@@ -65,7 +65,7 @@ export function Hero() {
             <span className="block overflow-hidden">
               <span className="inline-flex items-end">
                 <span className="mr-6 inline-block align-baseline text-[0.4em] font-mono uppercase tracking-[0.3em] text-paper/40">
-                  {'<BS>'}
+                  {'<<>>'}
                 </span>
                 {line2.split("").map((c, i) => (
                   <span

@@ -32,7 +32,7 @@ export default function CertificatesPage() {
 
         <div className="mt-20 grid gap-px overflow-hidden border hairline md:mt-28 md:grid-cols-2">
           {profile.certificates.map((c, i) => (
-            <Reveal key={c.credentialId} delay={i * 0.04}>
+            <Reveal key={i} delay={i * 0.04}>
               <a
                 href={c.url}
                 target="_blank"
