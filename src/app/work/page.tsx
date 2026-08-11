@@ -19,7 +19,7 @@ export default function WorkPage() {
     <section className="bg-background">
       <div className="mx-auto max-w-[1600px] px-6 pt-40 pb-28 md:px-10 md:pt-48 md:pb-40">
         <Reveal>
-          <SectionLabel index="(W)">Work · 2024 — 2025</SectionLabel>
+          <SectionLabel index="(W)">Work · 2025 — Present</SectionLabel>
         </Reveal>
         <Reveal delay={0.05}>
           <h1 className="text-display mt-6 text-[clamp(3rem,10vw,9rem)] font-semibold">

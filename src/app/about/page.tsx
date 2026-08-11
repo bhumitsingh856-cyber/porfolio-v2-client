@@ -34,6 +34,7 @@ export default function AboutPage() {
             <SectionLabel>Bio</SectionLabel>
           </div>
           <div className="space-y-6 md:col-span-7">
+            <p className="text-lg leading-relaxed text-foreground md:text-xl">{profile.about}</p>
             {profile.bio.map((p, i) => (
               <Reveal key={i} delay={i * 0.05}>
                 <p className="text-lg leading-relaxed text-foreground md:text-xl">
@@ -77,7 +78,11 @@ export default function AboutPage() {
           </div>
           <div className="grid gap-8 md:col-span-7 md:grid-cols-2">
             {Object.entries(profile.skills).map(([cat, items], i) => (
-              <Reveal key={cat} delay={i * 0.05} className="border-t hairline pt-4">
+              <Reveal
+                key={cat}
+                delay={i * 0.05}
+                className="border-t hairline pt-4"
+              >
                 <p className="font-mono text-[11px] uppercase tracking-[0.25em] text-muted-foreground">
                   {cat}
                 </p>

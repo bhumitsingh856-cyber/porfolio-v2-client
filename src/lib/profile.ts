@@ -19,10 +19,12 @@ export const profile = {
     "Curious",
   ],
   about:
-    "Full-Stack AI Engineer specializing in building LLM applications and Agentic Systems , I design and develop end-to-end AI products accress the full stack - AI Orchestration , frontend and backend",
+    "I'm a Full-Stack AI Engineer who builds production-ready AI products from agentic workflows to polished interfaces.",
   bio: [
-    "I build software at the intersection of full-stack engineering and applied AI — multi-agent systems, retrieval pipelines, and the interfaces that make them feel inevitable.",
-    "Currently a B.Tech CSE (AI & ML) undergrad at IPS Academy, Indore. I ship projects end-to-end, from data layer to interaction design.",
+    "I design and develop end-to-end AI applications that actually work. My focus is on multi-agent systems, RAG pipelines, and LLM-powered products using LangGraph, LangChain, and modern full-stack tools.",
+    "I believe AI should be more than a demo — it should be usable, reliable. That's why I ship complete products, not just API wrappers.",
+    "Right now, I'm learning Machine Learning & Deep Learning — building a strong foundation in how models actually work",
+    "B.Tech CSE (AI & ML) @ IPS Academy, Indore | CGPA: 8.8 | Graduating 2028",
   ],
   education: [
     {
@@ -45,11 +47,11 @@ export const profile = {
     },
   ],
   skills: {
-    Languages: ["Python", "TypeScript","JavaScript","Java"],
-    Frontend: ["React", "Next.js", "Tailwind CSS","Shadcn UI"],
-    Backend: ["Node.js","Express", "FastAPI", "MongoDB", "PostgreSQL", "SQL"],
-    AI : ["LangChain", "LangGraph", "RAG", "LLMs"],
-    ML : ["Numpy", "Pandas", "Matplotlib", "Seaborn" , "Scikit-Learn"],
+    Languages: ["Python", "TypeScript", "JavaScript", "Java"],
+    Frontend: ["React", "Next.js", "Tailwind CSS", "Shadcn UI"],
+    Backend: ["Node.js", "Express", "FastAPI", "MongoDB", "PostgreSQL", "SQL"],
+    AI: ["LangChain", "LangGraph", "RAG", "LLMs","MCP"],
+    ML: ["Numpy", "Pandas", "Matplotlib", "Seaborn", "Scikit-Learn"],
     Tools: ["Clerk", "Cloudinary", "LangSmith", "Git"],
   },
 
@@ -109,6 +111,6 @@ export const profile = {
       credentialId: "",
       url: "https://www.skills.google/public_profiles/0285c729-e995-4470-b498-294ab8f238b0",
       image: "/certificates/gc-badges.png",
-    }, 
+    },
   ],
 };

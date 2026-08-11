@@ -9,10 +9,10 @@ export type Project = {
   tech: string[];
   architecture?: { label: string; items: string[] }[];
   links: { live?: string; github?: string };
-  image:string;
-  frame1:string,
-  frame2:string,
-  frame3:string,
+  image: string;
+  frame1: string;
+  frame2: string;
+  frame3: string;
   // logo:string,
 };
 
@@ -21,15 +21,15 @@ export const projects: Project[] = [
     slug: "agent-atlas",
     name: "Agent Atlas",
     year: "June 2026",
-    image:"/agent-atlas/agent-atlas.png",
-    frame1:"/agent-atlas/research.png",
-    frame2:"/agent-atlas/graph.png",
-    frame3:"/agent-atlas/rag.png",
+    image: "/agent-atlas/agent-atlas.png",
+    frame1: "/agent-atlas/research.png",
+    frame2: "/agent-atlas/graph.png",
+    frame3: "/agent-atlas/rag.png",
     // // logo:"/agent-atlas/logo.png",
-    role: "Research assistant · multi-agent",
-    tagline: "Multi-agent research with citations, diagrams, and RAG chat.",
+    role: "Deep Research Platform",
+    tagline: "Multi-agent deep research with citations, diagrams, and RAG chat.",
     summary:
-      "Agent Atlas uses a LangGraph workflow to decompose a topic, run multi-stage research through specialized agents, and generate a structured report with citations, embedded images, and mermaid diagrams. Users can then chat with the report through a streaming RAG pipeline.",
+      "Deep research platform using LangGraph multi-agent orchestration. Breaks topics into parallel research streams, generates structured reports with citations & Mermaid diagrams, and enables RAG chat. ~100k–145k tokens per research cycle. 6+ specialized model integrations.",
     features: [
       "Multi-agent research workflow",
       "Parallel researcher execution",
@@ -46,10 +46,10 @@ export const projects: Project[] = [
       "Pinecone",
       "PostgreSQL",
       "shadcn/ui",
-      "Zustand", 
+      "Zustand",
     ],
     architecture: [
-      { label: "Frontend", items: ["Next.js", "shadcn/ui"] },
+      { label: "Frontend", items: ["Next.js", "shadcn/ui", "Tailwind CSS"] },
       { label: "Backend", items: ["FastAPI", "PostgreSQL"] },
       { label: "Orchestration", items: ["LangChain", "LangGraph", "Pinecone"] },
       {
@@ -70,78 +70,18 @@ export const projects: Project[] = [
     },
   },
   {
-    "slug": "campus-assistant",
-    "name": "Campus Assistant",
-    "year": "July 2026",
-    "image": "/campus-bot/hero.png",
-    "frame1": "/campus-bot/screen1.png",
-    "frame2": "/campus-bot/screen2.jpeg",
-    "frame3": "/campus-bot/screen3.png",
-    "role": "AI Campus Assistant",
-    "tagline": "Multi-channel conversational AI for campus student services with LangGraph orchestration.",
-    "summary": "Campus Assistant is an intelligent conversational AI agent that provides students with instant access to academic information, attendance records, syllabus, placements, and campus resources. Powered by LangGraph for agentic workflow orchestration, the system features tool-calling capabilities, PostgreSQL-backed session persistence, and Pinecone vector-based retrieval. Deployed across Telegram, WhatsApp, and Web, it consolidates campus services into a unified chat interface.",
-    "features": [
-      "Real-time attendance retrieval via portal integration",
-      "Syllabus access for engineering branches (CSE, CSE-AIML, CSE-DS, CS-IT)",
-      "Student profile management (register/unregister)",
-      "Web search & scraping with Tavily Search and Firecrawl",
-      "Vector-based semantic search over institutional documents",
-      "Multi-channel deployment (Telegram, WhatsApp, Web)",
-      "Persistent conversation history with PostgreSQL checkpointing",
-      "Agentic AI workflows with tool-calling capabilities",
-      "Context-aware conversations with message trimming"
-    ],
-    "tech": [
-      "Next.js",
-      "LangGraph",
-      "FastAPI",
-      "Pinecone",
-      "PostgreSQL",
-      "Telegram Bot API",
-      "Twilio",
-      "shadcn/ui"
-    ],
-    "architecture": [
-      { "label": "Frontend", "items": ["Next.js", "shadcn/ui", "Tailwind CSS"] },
-      { "label": "Backend", "items": ["FastAPI", "PostgreSQL", "psycopg async pool"] },
-      { "label": "Orchestration", "items": ["LangGraph", "LangChain", "Pinecone Vector Store"] },
-      { 
-        "label": "LLM & Tools", 
-        "items": [
-          "Cerebras GLM-4.7 — primary LLM",
-          "LangChain-Groq — optional provider",
-          "TavilySearch — web search",
-          "Firecrawl — web scraping & page interaction",
-          "Custom tools — attendance & syllabus retrieval"
-        ]
-      },
-      { 
-        "label": "Channels", 
-        "items": [
-          "Telegram Bot API",
-          "Twilio WhatsApp",
-          "REST API"
-        ]
-      }
-    ],
-    "links": {
-      "live": "https://campus-client-1bmw.vercel.app/",
-      "github": "https://github.com/bhumitsingh856-cyber/campus-agent"
-    }
-  },
-  {
     slug: "gen-ui",
     name: "Gen UI",
     year: "April 2026",
-    image:" /gen-ui/gen-ui.png",
-    frame1:"/gen-ui/ui.png",
-    frame2:"/gen-ui/f2.png",
-    frame3:"/gen-ui/dash.png",
+    image: " /gen-ui/gen-ui.png",
+    frame1: "/gen-ui/ui.png",
+    frame2: "/gen-ui/f2.png",
+    frame3: "/gen-ui/dash.png",
     // // logo:"/gen-ui/logo.png",
-    role: "AI frontend generator",
-    tagline: "A prompt becomes a complete React application.",
+    role: "AI Frontend builder",
+    tagline: "Convert your idea into a complete React app.",
     summary:
-      "Gen UI generates multi-file frontend projects from a single prompt — with a structured file tree, integrated editor, live preview, AI error correction, AI Assistant for file updation and downloadable, shareable output , persist generations in database.",
+      "AI-powered frontend builder. Converts natural language prompts into multi-file React applications with live preview, built-in editor, AI component updation, and one-click download. Uses Fireworks AI (Deepseek-v4-flash) for generation and Groq for error correction and AI updation.",
     features: [
       "Full multi-file project generation",
       "Clean component structure",
@@ -150,7 +90,7 @@ export const projects: Project[] = [
       "Downloadable code",
       "Shareable live link",
       "UI Assistant for file updation",
-      "Clerk Authentication"
+      "Clerk Authentication",
     ],
     tech: [
       "Next.js",
@@ -168,18 +108,82 @@ export const projects: Project[] = [
     },
   },
   {
+    slug: "campus-assistant",
+    name: "Campus Assistant",
+    year: "July 2026",
+    image: "/campus-bot/hero.png",
+    frame1: "/campus-bot/screen1.png",
+    frame2: "/campus-bot/screen2.jpeg",
+    frame3: "/campus-bot/screen3.png",
+    role: "AI Campus Assistant",
+    tagline:
+      "Multi-channel conversational AI for campus student services with LangGraph orchestration.",
+    summary:
+      "Campus Assistant is an intelligent conversational AI agent that provides students with instant access to academic information, attendance records, syllabus, placements, and campus resources. Powered by LangGraph for agentic workflow orchestration, the system features tool-calling capabilities, PostgreSQL-backed session persistence, and Pinecone vector-based retrieval. Deployed across Telegram, WhatsApp, and Web, it consolidates campus services into a unified chat interface.",
+    features: [
+      "Real-time attendance retrieval via portal integration",
+      "Syllabus access for engineering branches (CSE, CSE-AIML, CSE-DS, CS-IT)",
+      "Student profile management (register/unregister)",
+      "Web search & scraping with Tavily Search and Firecrawl",
+      "Vector-based semantic search over institutional documents",
+      "Multi-channel deployment (Telegram, WhatsApp, Web)",
+      "Persistent conversation history with PostgreSQL checkpointing",
+      "Agentic AI workflows with tool-calling capabilities",
+      "Context-aware conversations with message trimming",
+    ],
+    tech: [
+      "Next.js",
+      "LangGraph",
+      "FastAPI",
+      "Pinecone",
+      "PostgreSQL",
+      "Telegram Bot API",
+      "Twilio",
+      "shadcn/ui",
+    ],
+    architecture: [
+      { label: "Frontend", items: ["Next.js", "shadcn/ui", "Tailwind CSS"] },
+      {
+        label: "Backend",
+        items: ["FastAPI", "PostgreSQL"],
+      },
+      {
+        label: "Orchestration",
+        items: ["LangGraph", "LangChain", "Pinecone Vector Store"],
+      },
+      {
+        label: "LLM & Tools",
+        items: [
+          "Cerebras GLM-4.7 — primary LLM",
+          "LangChain-Groq — optional provider",
+          "TavilySearch — web search",
+          "Firecrawl — web scraping & CMS interaction",
+          "Custom tools — attendance & syllabus retrieval",
+        ],
+      },
+      {
+        label: "Channels",
+        items: ["Telegram Bot API", "Twilio WhatsApp", "REST API"],
+      },
+    ],
+    links: {
+      live: "https://campus-client-1bmw.vercel.app/",
+      github: "https://github.com/bhumitsingh856-cyber/campus-agent",
+    },
+  },
+  {
     slug: "orion-studio-ai",
     name: "Orion Studio AI",
     year: "Feb 2026",
-    image:"/orion-ai/orion-ai.png",
-    frame1:"/orion-ai/chat.png",
-    frame2:"/orion-ai/img.png",
-    frame3:"/orion-ai/gen.png",
+    image: "/orion-ai/orion-ai.png",
+    frame1: "/orion-ai/chat.png",
+    frame2: "/orion-ai/img.png",
+    frame3: "/orion-ai/gen.png",
     // // logo:"/orion-ai/logo.png",
-    role: "Multimodal AI chat platform",
-    tagline: "Enterprise-grade multimodal AI workspace.",
+    role: "Multimodal AI Workspace",
+    tagline: "Explore, create, and analyze—all in one seamless AI experience.",
     summary:
-    "An intelligent agent system for autonomous decision-making and tool routing, with a production RAG pipeline, multi-modal tools (web search, image generation, vision, code, documents), and a fast, responsive UI.",
+      "Unified multimodal AI workspace combining RAG, vision understanding, image generation, and web search. Built with Next.js, LangChain JS, Pinecone, and MongoDB. Features persistent chat memory and Clerk authentication.",
     features: [
       "Autonomous agent with tool routing",
       "RAG pipeline over user documents",
@@ -211,15 +215,15 @@ export const projects: Project[] = [
     slug: "orbit",
     name: "Orbit",
     year: "Jan 2026",
-    image:"/orbit/orbit.png",
-    frame1:"/orbit/profile.png",
-    frame2:"/orbit/home.png",
-    frame3:"/orbit/ai.png",
+    image: "/orbit/orbit.png",
+    frame1: "/orbit/profile.png",
+    frame2: "/orbit/home.png",
+    frame3: "/orbit/ai.png",
     // // logo:"/orbit/logo.png",
-    role: "Full-stack social platform",
-    tagline: "A social platform with realtime chat and AI inside.",
+    role: "Real-time Social Platform",
+    tagline: "Connect, share, and chat in real time.",
     summary:
-      "End-to-end social product: auth, profiles, posts, stories, likes, comments, follows, realtime chat, and AI for text and image generation. Tuned for performance with lazy loading, code splitting, and skeleton loaders.",
+      "Real-time social platform with JWT auth, stories, follow system, and AI-powered chat assistant. Built with MERN stack + Socket.io for live messaging. Handles media via Cloudinary with lazy loading and debounced search.",
     features: [
       "JWT auth with role-protected routes",
       "Posts, stories, likes, comments, follows",
