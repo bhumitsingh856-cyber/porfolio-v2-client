@@ -154,7 +154,7 @@ export const projects: Project[] = [
       {
         label: "LLM & Tools",
         items: [
-          "Cerebras GLM-4.7 — primary LLM",
+          "OpenRouter — primary LLM",
           "LangChain-Groq — optional provider",
           "TavilySearch — web search",
           "Firecrawl — web scraping & CMS interaction",
