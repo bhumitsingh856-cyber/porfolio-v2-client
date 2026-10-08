@@ -19,7 +19,7 @@ export const profile = {
     "Curious",
   ],
   about:
-    "I'm a Full-Stack AI Engineer who builds production-ready AI products from agentic workflows to polished interfaces.",
+    "I'm a Full-Stack AI Engineer who builds AI products from agentic workflows to polished interfaces.",
   bio: [
     "I design and develop end-to-end AI applications that actually work. My focus is on multi-agent systems, RAG pipelines, and LLM-powered products using LangGraph, LangChain, and modern full-stack tools.",
     "I believe AI should be more than a demo — it should be usable, reliable. That's why I ship complete products, not just API wrappers.",
@@ -50,8 +50,8 @@ export const profile = {
     Languages: ["Python", "TypeScript", "JavaScript", "Java"],
     Frontend: ["React", "Next.js", "Tailwind CSS", "Shadcn UI"],
     Backend: ["Node.js", "Express", "FastAPI", "MongoDB", "PostgreSQL", "SQL"],
-    AI: ["LangChain", "LangGraph", "RAG", "LLMs","MCP"],
-    ML: ["Numpy", "Pandas", "Matplotlib", "Seaborn", "Scikit-Learn"],
+    AI: ["LangChain", "LangGraph", "RAG", "LLMs", "MCP"],
+    ML: ["Numpy", "Pandas", "Matplotlib", "Seaborn", "Scikit-Learn", "NLP"],
     Tools: ["Clerk", "Cloudinary", "LangSmith", "Git"],
   },
 
